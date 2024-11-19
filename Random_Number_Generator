@@ -1,0 +1,42 @@
+import random
+
+# Generate a random integer between 1 and 10
+random_integer = random.randint(1, 10)
+print(random_integer)
+
+# Generate a random floating-point number between 0.0 and 1.0
+random_float = random.random()
+print(random_float)
+
+# Generate a random choice from a list
+my_list = ["apple", "banana", "cherry"]
+random_choice = random.choice(my_list)
+print(random_choice)
+
+# Shuffle a list randomly
+random.shuffle(my_list)
+print(my_list)
+
+# Generate a random sample of 3 elements from a list
+random_sample = random.sample(my_list, 3)
+print(random_sample)
+
+
+"""
+
+Random Number Generator
+
+Explanation:
+
+random.randint(a, b): Generates a random integer between a and b, inclusive.
+random.random(): Generates a random floating-point number between 0.0 and 1.0 (exclusive).
+random.choice(seq): Returns a random element from the sequence seq.
+random.shuffle(x): Shuffles the elements of the list x in place.
+random.sample(population, k): Returns a k length list of unique elements chosen from the population sequence or set.
+Additional Notes:
+
+For more complex random number generation, consider using the numpy.random module, which provides a variety of functions for generating random numbers from different distributions.
+To seed the random number generator for reproducibility, use random.seed(seed_value). This ensures that the same sequence of random numbers is generated each time the code is run with the same seed value.
+By understanding these basic functions, you can create a wide range of random number-based applications in Python, such as simulations, games, and data analysis.
+
+"""
