@@ -12,3 +12,14 @@ def check_number():
 
 # Call the function
 check_number()
+
+
+"""
+Explanation:
+The program asks the user to input a number.
+It uses if to check if the number is positive.
+If the first condition is false, it checks if the number is negative using elif.
+If neither condition is true, it prints that the number is zero using else.
+
+"""
+
