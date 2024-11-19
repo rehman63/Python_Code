@@ -1,0 +1,20 @@
+def write_to_file(filename, text):
+  with open(filename, 'w') as file:
+    file.write(text)
+
+def read_from_file(filename):
+  with open(filename, 'r') as file:
+    return file.read()
+
+filename = 'my_file.txt'
+text = "This is a test string."
+
+write_to_file(filename, text)
+content = read_from_file(filename)
+print(content)
+
+
+"""
+"Simple File I/O"
+
+"""
