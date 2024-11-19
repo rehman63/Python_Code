@@ -1,0 +1,66 @@
+pip install pytesseract Pillow
+
+import pytesseract
+from PIL import Image
+
+def extract_text_from_image(image_path):
+    """Extracts text from an image using PyTesseract.
+
+    Args:
+        image_path (str): Path to the image file.
+
+    Returns:
+        str: Extracted text from the image.
+    """
+
+    try:
+        img = Image.open(image_path)
+        text = pytesseract.image_to_string(img)
+        return text
+    except Exception as e:
+        print(f"Error extracting text: {e}")
+        return None
+
+# Example usage:
+image_file = "your_image.jpg"
+extracted_text = extract_text_from_image(image_file)
+
+if extracted_text:
+    print(extracted_text)
+else:
+    print("Text extraction failed.")
+
+
+
+
+"""
+Explanation:
+
+Import Necessary Libraries:
+
+pytesseract: Provides functions for optical character recognition (OCR).
+PIL: Python Imaging Library for image processing.
+Define the extract_text_from_image Function:
+
+Takes an image path as input.
+Opens the image using Image.open.
+Uses pytesseract.image_to_string to extract text from the image.
+Returns the extracted text or None if an error occurs.
+Example Usage:
+
+Specifies the image file path.
+Calls the extract_text_from_image function to extract text.
+Prints the extracted text or an error message.
+Tips for Better Accuracy:
+
+Image Preprocessing:
+Convert images to grayscale for better results.
+Enhance contrast and sharpness.
+Remove noise using techniques like thresholding.
+Tesseract Configuration:
+Experiment with different language models and configurations to optimize accuracy for specific languages and image types.
+Error Handling:
+Implement robust error handling to gracefully handle exceptions and provide informative error messages.
+By following these guidelines and adjusting the code to your specific needs, you can effectively extract text from images using Python and PyTesseract.
+
+"""
