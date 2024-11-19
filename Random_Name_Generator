@@ -1,0 +1,51 @@
+import random
+
+def generate_random_name(num_names=1):
+  """Generates random names.
+
+  Args:
+    num_names: The number of names to generate.
+
+  Returns:
+    A list of random names.
+  """
+
+  first_names = ["Alice", "Bob", "Charlie", "David", "Emily", "Frank", "Grace", "Henry", "Ivy", "Jack"]
+  last_names = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis", "Garcia", "Rodriguez", "Martinez"]
+
+  names = []
+  for _ in range(num_names):
+    first_name = random.choice(first_names)
+    last_name = random.choice(last_names)
+    name = f"{first_name} {last_name}"
+    names.append(name)
+
+  return names
+
+# Generate 5 random names
+random_names = generate_random_name(5)
+print(random_names)
+
+"""
+
+Random Name Generator
+
+Explanation:
+
+Import random: Imports the random module for random number generation.
+Define generate_random_name: Defines a function to generate random names.
+Create Name Lists: Creates two lists, first_names and last_names, containing common names.
+Generate Names: Iterates over the desired number of names:
+Selects a random first name and last name from the respective lists.
+Concatenates the first and last names to form a full name.
+Appends the full name to the names list.
+Return Names: Returns the list of generated names.
+Customization:
+
+More Names: Add more names to the first_names and last_names lists.
+Different Name Patterns: Modify the name generation logic to create different name patterns (e.g., middle names, nicknames).
+Language-Specific Names: Use language-specific name lists to generate names from different cultures.
+Weighted Randomness: Assign weights to names to influence the probability of their selection.
+By customizing these aspects, you can tailor the random name generator to your specific needs.
+
+"""
